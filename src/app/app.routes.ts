@@ -7,13 +7,19 @@ export const routes: Routes = [
   },
   {
     path: 'kornizka',
-    loadComponent: () =>
-      import('./kornizka-game/kornizka-game').then((m) => m.KornizkaGameComponent),
+    loadComponent: () => import('./game/game').then((m) => m.GameComponent),
+    data: {
+      name: 'Kornizka',
+      assetUrl: 'http://localhost:3000/games/Kornizka/index.html',
+    },
   },
   {
-    path: 'fraction',
-    loadComponent: () =>
-      import('./fraction-game/fraction-game').then((m) => m.FractionGameComponent),
+    path: 'fractions',
+    loadComponent: () => import('./game/game').then((m) => m.GameComponent),
+    data: {
+      name: 'Fractions',
+      assetUrl: 'http://localhost:3000/games/Fractions/index.html',
+    },
   },
   { path: '**', redirectTo: '' },
 ];
