@@ -8,6 +8,7 @@ export interface Game {
   path: string;
   description: string;
   assetUrl: string;
+  thumbnailUrl: string;
 }
 
 @Injectable({ providedIn: 'root' })
