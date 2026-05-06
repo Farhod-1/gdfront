@@ -13,6 +13,11 @@ export const routes: Routes = [
     path: '',
     loadComponent: () => import('./games-list/games-list').then((m) => m.GamesListComponent),
   },
+  {
+    path: 'presentation',
+    loadComponent: () => import('./presentation/presentation').then((m) => m.PresentationComponent),
+  },
+  { path: 'presention', redirectTo: 'presentation' },
   gameRoute('aptobus', 'Aptobus', 'Aptobus'),
   gameRoute('find-the-continent', 'Find the Continent', 'FindTheContinent'),
   gameRoute('fractions', 'Fractions', 'Fractions'),
